@@ -1,12 +1,14 @@
-In this folder the next goals have been achieved.
--> Position is controlled by the Backstepping procedure, although it worked
-with Euler Angles
--> The full attitude is controlled by Backstepping in quaternions.
+# Goals Achieved
 
-----------------------------
-Missing 
--> Compute the position control with the vectorial perspective, this is needed
-in order to compute the desired attitude and send it to the quaternion attitude
-controller. 
--> Extract the desired attitude from the position controller
+->In this code the Quadrotor is controlled with a nonlinear Backstepping based on Quaternions for attitude parametrization. 
+
+-> A new DoubleSpinBox has been added in "myTab" in which the new yaw angle can be added to change the attitude while the position control is active.
+
+# Problems detected
+-> The yaw angle must be in 
+$\psi \in (-40,40)$
+ (degrees)
+
+-> The Quadrotor attitude is obtained by mixing up the data from the Optitrack and IMU, perhaps if the attitude is obtained only from optitrack the rotation could be the entire circle. 
+
 
