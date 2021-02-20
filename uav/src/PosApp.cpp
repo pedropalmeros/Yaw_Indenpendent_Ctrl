@@ -142,6 +142,12 @@ PosApp::~PosApp() {
     -> The output is given in quaternion for attitude
     -> The output is given in 3D vector for angular speed.
 *****************************************************************/
+
+/*****************************************************************
+EL ALGORITMO FUNCIONA BIEN PARA ÁNGULOS PEQUEÑOS,
+-> COSAS POR VERIFICAR: QUE LA ORIENTACIÓN SE EXTRAIGA COMPLEMTAMENTE DEL OPTITRACK
+-> MULTIPLICAR LA ORIENTACIÓN DEL DRONE POR EL QUATERNION DE LA ROTACIÓN EN YAW
+*****************************************************************/
 const AhrsData *PosApp::GetOrientation(void) const {
     //get yaw from vrpn
     // Generates a quaternion object named vrpnQuaternion
